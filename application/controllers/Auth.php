@@ -109,13 +109,13 @@ class Auth extends CI_Controller
             $data = [
                 'name' => htmlspecialchars($this->input->post('name', true)),
                 'email' => htmlspecialchars($this->input->post('email', true)),
-                'image' => 'default.png',
+                'image' => 'default.jpg',
                 'password' => password_hash(
                     $this->input->post('password1'),
                     PASSWORD_DEFAULT
                 ),
                 'role_id' => 2,
-                'is_active' => 1,
+                'is_active' => 0,
                 'date_created' => time()
             ];
             //siapkan token
